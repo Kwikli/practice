@@ -1,0 +1,110 @@
+.header{
+    width: 100%;
+    height: 35px;
+    background: #006e7a;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+.header button{
+    border: none;
+    background: #1e1e1e;
+    font-size: 20px;
+    margin: 1px;
+    color: #f5feff;
+    cursor: pointer;
+}
+body{
+    
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #5a5a5a;
+}
+.theme{
+    padding: 8px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgb(240, 240, 240);
+    border: 1px solid #a1a1a1;
+    background: #222222;
+    color: aliceblue;
+}
+.theme div{
+    display: flex;
+    width: 98%;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.theme #app{
+    margin-top: 8px;
+    display: flex !important;
+    width: 98% !important;
+    justify-content: space-between !important;
+    justify-content: center;
+    flex-direction: row;
+    align-items: flex-start;
+}
+.theme b{
+    margin: 0px 0;
+}
+.container{
+    padding-top: 35px;
+    font-size: 24px;
+    margin: 0 15%;
+    box-shadow: 0px 0px 20px 2px #1e1e1e;
+    background: #1e1e1e;
+}
+.pictures img{
+    object-fit: cover;
+    width: 100%;
+}
+.pictures{ 
+    margin-top: 35px !important;
+    margin: 10px; 
+    height: 73%;
+    cursor: pointer;
+    object-fit: cover;
+}
+.pictures_fancy{
+    width: 50% !important;
+    height: 48%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 18% 25%;
+    width: 680px;
+    background-color: #1a1a1ade;
+    object-fit: fill;
+    overflow: hidden;
+}
+.pictures_fancy img{
+    object-fit: cover;
+}
+#app button{
+    width: 68%;
+    height: 25px;
+    position: absolute;
+    background-color: #a9a9a9;
+    border: 1px solid #a9a9a9;
+    border-radius: 10px;
+}
+.btn_active{
+    background-color: #4beb23 !important;
+}
+input{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #a9a9a9;
+    text-align: center;
+    font-size: 24px;
+    outline: none;
+    color: rgb(255, 255, 255);
+}
+#funct button{
+    margin: 15px 0;
+}

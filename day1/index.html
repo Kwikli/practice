@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" :href="curCss">
+    
+    <title>day 1</title>
+       
+</head>
+<body>  
+    
+    <div class="header">
+        <button type="submit" v-on:click="changeCss">
+            Змінити тему
+        </button>
+    </div>
+
+    <div class="container">
+        <div class="theme">
+            <b>If else</b>_Завдання 3 (1)
+            <div id="ifelse">
+                <input v-on:change="checkAge" v-model="age" type="number" placeholder="Age">
+                <div>Ваш вік - {{age}}</div>
+                <div>{{msg}}</div>
+            </div>
+        </div>
+        <div class="theme">
+            <b>Цикли</b>_Завдання 6 (1)
+            <div id="for">
+                <div class="for" v-for="mnog in mnog">{{mnog}}</div>
+            </div>
+        </div>
+        <div class="theme">
+            <b>Функції</b>_Завдання 11 (3) 
+            <div id="funct">
+                <input v-model="tNumber" type="text" v-on:submit="tryNumber" placeholder="Ваше число" >
+                <button type="submit" v-on:click="tryNumber">Вгадати число</button>
+                <div class="msg">{{msg}}</div>
+                Спроба - {{attempt}}
+            </div>
+        </div>
+        <div class="theme">
+            <b>Робота з рядками</b>_Завдання 1,2 (2)
+            <div id="ryadok">
+                <div class="zavdannya1">
+                    <input type="text" v-model="ltext">
+                {{ltext.length}}
+                </div>
+                <div class="ryadok_img">
+                    <div class="img" v-for="picture in picture">
+                    <img :src="picture" alt="Image">
+                </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="theme">
+            <b>Local storage</b>_Завдання 2,4 (2)
+            <div class="mas"></div>
+        </div>
+        <div class="theme">
+            <b>Події миші та клавіатури </b>_Завдання 16,17,18 (7)<br>
+            
+                <div id="app">
+                    <button v-on:click="isInFocused" :class="{btn_active: isFocused}">Завдання 16,17</button>
+                    
+                    <div class="pictures" v-for="(picture, index) in picture">
+                        <img v-on:mouseOver="focus" v-on:click="fancybox" :src="picture" alt="Picture" :id="index">
+                    </div>
+                </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="day1.js"></script>
+</body> 
+</html>
