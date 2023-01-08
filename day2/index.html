@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>day 2</title>
+       
+</head>
+<body>  
+    <div class="container">
+        <div id="day2">
+            <input type="radio" name="quote" v-model="isAuthor" id="quote" value="true">Є автор
+            <input type="radio" name="quote" v-model="isAuthor" id="quote" value="">Без автора
+            <hr>v-for
+                <div class="quote" v-for="q in quote">
+                    {{q.quote}} - {{q.source}}
+                </div>
+            <hr>v-bind
+                <div class="quote" v-for="q in quote">
+                    <div :class="q.quote.length > 40 ? 'red' : 'black'">{{q.quote}} - {{q.source}}</div> 
+                </div>
+            <hr>v-if
+                <div class="quote" v-for="q in filteredQuotes">
+                    {{q.quote}} - {{q.source}}
+                </div>
+            <hr>Sort
+                <button @click="sortBySource()">Sort</button>
+                <div class="quote" v-for="q in quote">
+                    {{q.quote}} - {{q.source}}
+                </div>         
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="day2.js"></script>
+</body> 
+</html>
