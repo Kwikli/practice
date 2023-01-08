@@ -27,10 +27,15 @@
             </div>
         </div>
         <div class="theme">
-            <b>Цикли</b>_Завдання 6 (1)
-            <div id="for">
-                <div class="for" v-for="mnog in mnog">{{mnog}}</div>
-            </div>
+            <b>Події миші та клавіатури </b>_Завдання 16,17,18 (7)<br>
+            
+                <div id="app">
+                    <button v-on:click="isInFocused" :class="{btn_active: isFocused}">Завдання 16,17</button>
+                    
+                    <div class="pictures" v-for="(picture, index) in picture">
+                        <img v-on:mouseOver="focus" v-on:click="fancybox" :src="picture" alt="Picture" :id="index">
+                    </div>
+                </div>
         </div>
         <div class="theme">
             <b>Функції</b>_Завдання 11 (3) 
@@ -60,16 +65,12 @@
             <b>Local storage</b>_Завдання 2,4 (2)
             <div class="mas"></div>
         </div>
+        
         <div class="theme">
-            <b>Події миші та клавіатури </b>_Завдання 16,17,18 (7)<br>
-            
-                <div id="app">
-                    <button v-on:click="isInFocused" :class="{btn_active: isFocused}">Завдання 16,17</button>
-                    
-                    <div class="pictures" v-for="(picture, index) in picture">
-                        <img v-on:mouseOver="focus" v-on:click="fancybox" :src="picture" alt="Picture" :id="index">
-                    </div>
-                </div>
+            <b>Цикли</b>_Завдання 6 (1)
+            <div id="for">
+                <div class="for" v-for="mnog in mnog">{{mnog}}</div>
+            </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
