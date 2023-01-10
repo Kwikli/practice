@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>day 4</title>
+       
+</head>
+<body>  
+    <div class="container">
+        <div class="students" id="students">
+            <form action="">
+                <input type="text" id="studentname" v-model="studentname" placeholder="ПББ">
+                <div><input type="checkbox" name="spr" id="spr" v-model="spr" placeholder="">Здана пр</div>
+                <input type="text" v-model="sgroup" id="sgroup" placeholder="Група">
+                <input type="date" v-model="sbirthday" id="sbirthday" placeholder="Дата народження">
+                <button type="button" @click="Sadd(studentname, spr, sgroup, sbirthday)">Додати</button>
+            </form>
+            <hr>
+            <div v-for="stud in s">
+                {{stud.name}} - {{stud.birthday}} - {{stud.group}} - {{stud.pr}}<br>
+            </div>
+            <hr>
+            <input type="text" name="searchstudent" id="searchstudent" v-model="search" placeholder="Пошук">
+            <div v-for="stud in searchHandler">
+                {{stud.name}} - {{stud.group}} - {{stud.birthday}}
+            </div>
+            <hr>
+            <table>
+                <tr>
+                    <th>Ім'я</th>
+                    <th>Пр</th>
+                    <th>Дія</th>
+                  </tr>
+                  <tr v-for="(s,index) in s">
+                    <td>{{s.name}}</td>
+                    <td><input type="checkbox" name="pr" id="pr" :value="index" v-model="s.pr"></td>
+                    <td><button @click="Sdelete(index)" class="delSt" :id="index"><img src="./del.png" alt="delete"></button></td>
+                    
+                  </tr>
+                  
+            </table>
+            
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="day4.js"></script>
+
+</body> 
+</html>
